@@ -21,8 +21,13 @@
 
     <header>
         <a href="/"><h1 class="logo">U<span style="color:orange">mart</span></h1></a>
-
+    
+        {{!-- <a href="#" class="dropdown-search">
+            <i class="fa fa-search"></i>
+        </a> --}}
+    
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
         <nav>
             <ul>
                 <li class="search">
@@ -30,21 +35,57 @@
                     <button class="search-btn"><i class="fa fa-search"></i></button>
                 </li>
                 <li class="dropdown">
-                    <button class="dropbtn">Dashboard <i class="fa fa-dashboard"></i></button>
-                    <ul class="dropdown-content">
+                    <button class="dropbtn" onclick="myFunction()">Dashboard <i class="fa fa-caret-down"></i></button>
+                    <ul class="dropdown-content" id="myDropdown">
                         <li><a href="/create">Create ads</a></li>
                         <li><a href="/my-ads">My ads</a></li>
+                        <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Login</a></li>
                 <li><a href="#">Sell</a></li>
             </ul>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
+        <div class="test">
+            <a href="#" class="dropdown-search">
+                <i class="fa fa-search"></i>
+            </a>
+            <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
             <span></span>
         </label>
+        </div>   
     </header>
+    {{!-- Banner --}}
+    <hr>
+    <div class="margin-top">
+    <div class="banner">
+            <div class="hero-text">
+                <h1 class="shadow">Buy, Sell & Rent House </h1>
+                <p>Within Terrestrial Institution In Akwa Ibom State</p>
+                
+                <a href="#" class="sell-item">Sell</a>
+            </div>
+        </div>
+    </div>
     
+    
+
+
+
+    {{!-- <section class="showcase">
+        <div class="showcase-image"></div>
+        <div class="showcase-text wrapper">
+            <h2>Buy, Sell And Rent Hause Within Terrestrial Institution</h2>
+            <div class="showcase-btn">
+                <a href="#" class="buy">Buy</a>
+                <a href="#" class="sell">Sell</a>
+            </div>
+        </div>
+    </section> --}}
+    
+
+
    
     {{{body}}}
 
