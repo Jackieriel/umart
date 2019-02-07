@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/aksumart.css">
+    <link rel="stylesheet" href="/public/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/public/css/nav.css">
+
+    <link rel="stylesheet" href="/public/css/main.css">
+    {{!-- <link rel="stylesheet" href="/public/css/responsive.css">
+    <link rel="stylesheet" href="/public/css/products.css"> --}}
+    
+    <title>AKSUMart</title>
+</head>
+
+<body>
+    {{!-- Header --}}
+
+    <header>
+        <a href="/"><h1 class="logo">U<span style="color:orange">mart</span></h1></a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li class="search">
+                    <input type="text" class="search-box" placeholder="Search for brand, products and category...">
+                    <button class="search-btn"><i class="fa fa-search"></i></button>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Dashboard <i class="fa fa-dashboard"></i></button>
+                    <ul class="dropdown-content">
+                        <li><a href="/create">Create ads</a></li>
+                        <li><a href="/my-ads">My ads</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sell</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+    
+   
+    {{{body}}}
+
+     <!--for nav menu-->
+    {{!-- <ul>
+        <li><a href="/">Home</a></li>
+        <b style="color:red">Menu</b>
+        <li><a href="/create">Create ads</a></li>
+        <li><a href="/my-ads">My ads</a></li>
+    </ul> --}}
+{{!-- {{messages('message', locals)}} --}}
+{{!-- {{messages('message', locals)}} --}}
+
+
+    <!-- Render child view here -->
+
+
+    <script src="/public/js/aksumart.js"></script>
+    <script src="/public/js/main.js"></script>
+
+</body>
+
+</html>

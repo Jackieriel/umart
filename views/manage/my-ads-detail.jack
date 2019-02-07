@@ -1,0 +1,7 @@
+<h1>ADMIN ADS DETAILS</h1>
+Category: {{this.adverts.category}} <br>
+Title: {{this.adverts.title}} <br>
+Price: {{this.adverts.price}} <br>
+Zone: {{this.adverts.zone}} <br>
+Product Discription: {{this.adverts.description}} <br>
+<a href="/edit/{{this._id}}">Edit</a>

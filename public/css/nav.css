@@ -1,0 +1,258 @@
+:root {
+    --background: #4267b2;;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    color: #ffffff;
+    top: 0;
+    padding: 1em;
+  }
+
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+  }
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+  }
+
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+
+nav {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+  }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18;
+    /* font-size: 1.2rem; */
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+nav a:hover {
+    color: rgb(214, 200, 200);
+    width: 100%;
+  }
+  
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+  }
+  
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+.logo{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-bottom: solid 2px #ffffff;
+}
+
+
+@media screen and (min-width: 800px){
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  /* memmemem */
+  .logo {
+    grid-column: 1 / 2;
+    border-bottom: none;
+    color: #ffffff;
+  }
+
+  
+  nav {
+   all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    right: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / -1;
+    /* display: flex; */
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    /* margin-left: 3em; */
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: rgb(214, 200, 200);
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+  
+  .search {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.search input[type=text]{
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-top: -5px;
+}
+
+.search-btn {
+  padding: 6px;
+  margin-right: 20px;
+  background-color: orange;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: var(--background);
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+}
+

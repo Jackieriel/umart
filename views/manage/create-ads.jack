@@ -1,0 +1,34 @@
+<h2>{{viewTitle}}</h2>
+
+<form action="/create" method="POST" autocomplete="off" class="form-container">
+    <label>Category</label>
+    <select name="category">
+        <option style="display:none" disabled selected value> -- select Catgory -- </option>
+        <option value="Mobile Phones">Moblie Phone</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Laptop">Laptops</option>
+    </select>
+
+    {{!-- <input type="text" name="category" placeholder="Category"> --}}
+
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Ads Title">
+
+    <label>Price</label>
+    <input type="number" name="price" placeholder="Enter Price">
+
+    <label>Zone</label>
+    <select name="zone">
+        <option style="display:none" disabled selected value> -- select Zone -- </option>
+        <option value="aksu">AKSU</option>
+        <option value="uniuyo">UniUyo</option>
+        <option value="akwapoly">AkwaPoly</option>
+        <option value="heritage">Heritage poly</option>
+        <option value="coea">COEA</option>
+    </select>
+
+    <label>Description</label>
+    <textarea name="description" placeholder="Enter Ads Description" style="height:200px"></textarea>
+
+    <button type="submit" class="submit">Submit</button>
+</form>

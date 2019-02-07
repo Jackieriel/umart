@@ -1,0 +1,20 @@
+{{!-- <div id="messages">
+    {{#each type in object.keys(messages)}}
+        {{#each message in messages[type]}}
+        <div class="my-alert my-alert"{{+type}}>
+            {{message}}
+        </div>
+        {{/each}}
+    {{/each}}
+</div> --}}
+
+
+<div id="messages">
+    {{object.keys(messages).forEach(function (type){}}
+        {{#each message in messages[type]}}
+        <div class="my-alert my-alert"{{+type}}>
+            {{message}}
+        </div>
+        {{/each}}
+    {{/each}}
+</div>

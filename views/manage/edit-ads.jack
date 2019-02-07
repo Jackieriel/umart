@@ -1,0 +1,36 @@
+<h2>{{viewTitle}}</h2>
+
+<form action="/edit-ads/{{this.adverts._id}}" method="POST" autocomplete="off" class="form-container">
+
+    <label>Category</label>
+    <select name="category">
+        <option value={{this.adverts.category}}>{{this.adverts.category}}</option>
+        {{!-- <option style="display:none" disabled selected value> -- select Catgory -- </option> --}}
+        <option value="Phones">Moblie Phone</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Laptop">Laptops</option>
+    </select>
+
+    {{!-- <input type="text" name="category" placeholder="Category"> --}}
+
+    <label>Title</label>
+    <input type="text" name="title" value={{this.adverts.title}}>
+
+    <label>Price</label>
+    <input type="number" name="price" value={{this.adverts.price}}>
+
+    <label>Zone</label>
+    <select name="zone">
+        <option value={{this.adverts.zone}}>{{this.adverts.zone}}</option>
+        <option value="aksu">AKSU</option>
+        <option value="uniuyo">UniUyo</option>
+        <option value="akwapoly">AkwaPoly</option>
+        <option value="heritage">Heritage poly</option>
+        <option value="coea">COEA</option>
+    </select>
+
+    <label>Description</label>
+    <textarea name="description" value={{this.adverts.description}} style="height:200px">{{this.adverts.description}}</textarea>
+
+    <button type="submit" class="submit">Update</button>
+</form>
