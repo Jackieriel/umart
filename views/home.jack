@@ -1,14 +1,44 @@
+    {{!-- Banner --}}
+    <hr>
+    <div class="margin-top">
+    <div class="banner">
+            <div class="hero-text">
+                <h1 class="shadow">Buy, Sell & Rent House </h1>
+                <p>Within Terrestrial Institutions In Akwa Ibom State</p>
+                
+                <a href="#" class="sell-item">Sell</a>
+            </div>
+        </div>
+    </div>
+
+<p class="latest-ads">Latest Post</p>
 
 <div class="my-grid-container">
     {{#each list}}
     <div class="product">
         <a href="/ads/{{this._id}}">
-            <p>{{this.title}}</p>
+            <div class="ads-image">
+                <img src="/public/Img/Products/iphone.png" alt="Iphone" srcset="">
+            </div>
+            <div class="ads-content">
+                <p>{{this.title}}</p>
         </a>
 
         <p>N{{this.price}}</p>
         <br>
+        </div>
     </div>
     {{/each}}
 </div>
 
+{{!-- <div class="advertise">
+    <h3>You need a Website</h3>
+    <p>Jackieriel-Soft is takes care of that.</p>
+    <p>Contact Us on: 2348131327382</p>
+
+    <p>Jackieriel-Soft is takes care of that.</p>
+    <p>Contact Us on: 2348131327382</p>
+    <p>Jackieriel-Soft is takes care of that.</p>
+    <p>Contact Us on: 2348131327382</p><p>Jackieriel-Soft is takes care of that.</p>
+    <p>Contact Us on: 2348131327382</p>
+</div> --}}

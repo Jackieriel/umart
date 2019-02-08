@@ -1,6 +1,6 @@
-<h1>Manage Ads</h1>
+<h1 class="page-margin-top"Manage Ads</h1>
 
-<div class="grid-container">
+<div class="my-grid-container">
     {{#each list}}
     <div class="product">
         <a href="/my-ads-detail/{{this._id}}">

@@ -2,6 +2,7 @@
     --background: #4267b2;
     --messanger: #0084FF;
     --dropdown-color:#456cbb;
+    --twitter:#1DA1F2;
   }
   
   *, *::before, *::after {
@@ -240,8 +241,8 @@ nav a:hover {
     border: none;
     display: inline-block;
     padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
+    color: #ffffff;
+    background-color: var(--background);
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -249,8 +250,8 @@ nav a:hover {
   }
   
   .hero-text a:hover {
-    background-color: var(--background);
-    color: #ffffff;
+    background-color: #ffffff;
+    color: var(--background);
   }
 
   .sell-item{

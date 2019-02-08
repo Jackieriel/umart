@@ -56,18 +56,7 @@
         </label>
         </div>   
     </header>
-    {{!-- Banner --}}
-    <hr>
-    <div class="margin-top">
-    <div class="banner">
-            <div class="hero-text">
-                <h1 class="shadow">Buy, Sell & Rent House </h1>
-                <p>Within Terrestrial Institution In Akwa Ibom State</p>
-                
-                <a href="#" class="sell-item">Sell</a>
-            </div>
-        </div>
-    </div>
+
     
     
 
@@ -86,23 +75,70 @@
     
 
 
-   
+<!-- Render child view here -->
     {{{body}}}
 
-     <!--for nav menu-->
-    {{!-- <ul>
-        <li><a href="/">Home</a></li>
-        <b style="color:red">Menu</b>
-        <li><a href="/create">Create ads</a></li>
-        <li><a href="/my-ads">My ads</a></li>
-    </ul> --}}
-{{!-- {{messages('message', locals)}} --}}
+
 {{!-- {{messages('message', locals)}} --}}
 
 
-    <!-- Render child view here -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-contact">
+            <div class="left">
+                <ul>
+                    <li>
+                        <div class="faicon">
+                            <i class="fa fa-envelope fa-2x"></i>
+                        </div>
+                        <div class="footer-text-content">
+                            Email Support <br> umart@gmail.com
+                        </div>
+                    </li>
+                    <li>
+                        <div class="faicon">
+                            <i class="fa fa-mobile fa-2x"></i>
+                        </div>
+                        <div class="footer-text-content">
+                            Phone support <br> +2348131327382
+                        </div>
+                    </li>
+                     <li>
+                        <div class="faicon">
+                            <i class="fa fa-telegram fa-2x"></i>
+                        </div>
+                        <div class="footer-text-content">
+                            Telegram <br> +2348131327382
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-social">
+            <div class="footer-logo">
+                    <a href="#" class="logo-img">U<span>Mart</span></a>
+                </div>
+                <div class="right-body">
+                    <a href="#">About Us</a>
+                    <a href="#">Terms And Condition</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="socials">
+                    <a href="#" class="facebook">f</a>
+                    <a href="#" class="whatsapp">W</a>
+                    <a href="#" class="twitter">t</a>
+                    <a href="#" class="slack">s</a>
+                    <a href="#" class="google-plus">g+</a>
+                </div>
+        </div>
 
-
+        <div class="copyright">
+            <p>Developed by Jackieriel-Soft</p>
+        </div>
+    </div>
+    
+   
+</footer>
     <script src="/public/js/aksumart.js"></script>
     <script src="/public/js/main.js"></script>
 

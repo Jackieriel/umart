@@ -1,4 +1,4 @@
-<h2>{{viewTitle}}</h2>
+<h2 class="page-margin-top">{{viewTitle}}</h2>
 
 <form action="/create" method="POST" autocomplete="off" class="form-container">
     <label>Category</label>
