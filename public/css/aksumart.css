@@ -156,18 +156,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #ffff;
 }
 
-/* footer{
-  text-align: center;
-  margin-top: 2em;
-  background-color: var(--background);
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} */
 
 footer p{
   font-style: italic;
@@ -198,6 +189,8 @@ footer p{
     border-left: 2px solid #adadad;
     padding-left: 10px;
     margin-left: 10px;
+    text-align: left;
+    color: var(--background);
   }
 
   .copyright{
@@ -257,6 +250,11 @@ color: var(--background);
 
 .right-body a {
   width: 50%;
+  display: block;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 13px;
+  margin: 10px 0;
 }
 
 .socials {
@@ -270,11 +268,16 @@ color: var(--background);
   width: 40px;
   height: 40px;
   display: flex;
-  align-items: center;
+  color: var(--background)
+  /* align-items: center;
   justify-content: center;
   margin: 0 5px;
+  text-align: left; */
 }
-
-
+.footer-logo{
+  text-decoration: none;
+  margin-right: 0.5em;
+  margin-left: -11px;
+}
 }
 

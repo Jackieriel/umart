@@ -31,14 +31,10 @@
     {{/each}}
 </div>
 
-{{!-- <div class="advertise">
+<div class="advertise">
     <h3>You need a Website</h3>
     <p>Jackieriel-Soft is takes care of that.</p>
     <p>Contact Us on: 2348131327382</p>
 
-    <p>Jackieriel-Soft is takes care of that.</p>
-    <p>Contact Us on: 2348131327382</p>
-    <p>Jackieriel-Soft is takes care of that.</p>
-    <p>Contact Us on: 2348131327382</p><p>Jackieriel-Soft is takes care of that.</p>
-    <p>Contact Us on: 2348131327382</p>
-</div> --}}
+   
+</div>

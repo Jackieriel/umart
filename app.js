@@ -7,6 +7,15 @@ const session = require('express-session')
 var bodyParser = require("body-parser");
 // const flash = require('express-flash');
 
+// Upload require
+const multer = require("multer");
+const cloudinary = require("cloudinary");
+var fs = require('fs');
+const cloudinaryStorage = require("multer-storage-cloudinary");
+
+// Require .env file
+require('dotenv').config()
+
 // init app
 const app = express()
 const port = 3000
@@ -169,7 +178,7 @@ app.post('/create', function (req, res) {
   let adverts = new Adverts()
   adverts.category = req.body.category
   adverts.title = req.body.title
-  adverts.price = req.body.price
+  adverts.price = re1Qq.body.price
   adverts.zone = req.body.zone
   adverts.description = req.body.description
 
@@ -209,6 +218,21 @@ app.get('/my-ads/delete/:id', function(req, res){
     }
   })
 })
+
+// Cloudinary setup
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
+  });
+
+  const storage = cloudinaryStorage({
+    cloudinary: cloudinary,
+    folder: "product",
+    allowedFormats: ["jpg", "png"],
+    transformation: [{ width: 500, height: 500, crop: "limit" }]
+    });
+    const parser = multer({ storage: storage });
 
 
 

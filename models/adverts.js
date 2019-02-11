@@ -21,6 +21,10 @@ let advertsSchema = mongoose.Schema({
     description: {
         type: String,
         required: "This field is required."
+    },
+    image: {
+        type: String,
+        required: "This field is required."
     }
 });
 

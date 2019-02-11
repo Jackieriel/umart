@@ -1,6 +1,6 @@
 <h2 class="page-margin-top">{{viewTitle}}</h2>
 
-<form action="/create" method="POST" autocomplete="off" class="form-container">
+<form action="/create" method="POST" autocomplete="off" class="form-container" enctype="multipart/form-data">
     <label>Category</label>
     <select name="category">
         <option style="display:none" disabled selected value> -- select Catgory -- </option>
@@ -29,6 +29,10 @@
 
     <label>Description</label>
     <textarea name="description" placeholder="Enter Ads Description" style="height:200px"></textarea>
+
+    <label>Upload Image</label>
+    <input type='file' name='image' />
+    <br>
 
     <button type="submit" class="submit">Submit</button>
 </form>
