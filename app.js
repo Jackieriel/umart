@@ -173,14 +173,44 @@ app.get('/create', function (req, res) {
   })
 })
 
+// // create submit route
+// app.post('/create', function (req, res) {
+//   let adverts = new Adverts()
+//   adverts.category = req.body.category
+//   adverts.title = req.body.title
+//   adverts.price = re1Qq.body.price
+//   adverts.zone = req.body.zone
+//   adverts.description = req.body.description
+
+//   // Save the data from form
+//   adverts.save(function (err) {
+//     if (err) {
+//       console.log(err)
+//       return
+//     } else {
+//       req.flash('alert-success', 'Ads Creaated Successfully')
+//       res.redirect('/my-ads')
+//     }
+//   })
+// })
+
 // create submit route
-app.post('/create', function (req, res) {
+app.post('/create', parser.single("image"), function (req, res) {
   let adverts = new Adverts()
   adverts.category = req.body.category
   adverts.title = req.body.title
   adverts.price = re1Qq.body.price
   adverts.zone = req.body.zone
   adverts.description = req.body.description
+  
+  console.log(req.file) // to see what is returned to you
+      const image = {};
+      image.url = req.file.url;
+      image.id = req.file.public_id;
+  
+  Image.create(image) // save image information in database
+        .then(newImage => res.json(newImage))
+        .catch(err => console.log(err));
 
   // Save the data from form
   adverts.save(function (err) {
@@ -193,6 +223,8 @@ app.post('/create', function (req, res) {
     }
   })
 })
+
+
 
 // My Adverts user
 app.get('/my-ads', function (req, res) {
@@ -235,6 +267,11 @@ cloudinary.config({
     const parser = multer({ storage: storage });
 
 
+  
+
 
 // Call a listening function/ start server
 app.listen(port, () => console.log(`App Successfully connected on port ${port}!`));
+
+
+
